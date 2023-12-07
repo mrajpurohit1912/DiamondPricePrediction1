@@ -2,7 +2,7 @@ import sys
 import src.logger import logging
 
 def error_message_detail(error,error_detail:sys):
-    _,_,exc_tb = error.detail.exe_info()
+    _,_,exc_tb = error.detail.exc_info()
     file_name = exc_tb.tb_frame.f_code.co_filename
 
     error_message = "Error occured in pyhton script name [{0}] line number [{1}] erro message"(
